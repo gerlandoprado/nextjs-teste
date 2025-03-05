@@ -23,7 +23,7 @@ jobs:
       - name: Conectar ao servidor via SSH e atualizar a aplicação
         run: |
           ssh -i ~/.ssh/id_rsa ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} << 'EOF'
-            cd /nextjs-teste
+            cd /home/ubuntu/nextjs-teste
             git pull origin production
             docker-compose down
             docker-compose build
